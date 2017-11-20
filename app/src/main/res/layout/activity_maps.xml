@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/maps_layout"
+    tools:context="com.example.tejasbhoir.locationappupdated.MainActivity"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.mapwithmarker.MapsMarkerActivity" />
+
+    <TextView
+        android:id="@+id/coordinatesDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:gravity="end"
+        android:layout_gravity="bottom"
+        android:text="[0, 0]" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/popupNoType"
+            android:visibility="gone"
+            android:background="#ffffff">
+            <TextView
+                android:id="@+id/nameNoType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_margin="30dp"
+                android:textSize="22dp"
+                android:text="This is a popup window."/>
+            <TextView
+                android:id="@+id/timeNoType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_margin="30dp"
+                android:textSize="22dp"
+                android:text="This is a popup window."/>
+            <Button
+                android:id="@+id/dismissNoType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Done"
+                android:layout_marginBottom="16dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/popupType"
+            android:visibility="gone"
+            android:background="#ffffff">
+            <TextView
+                android:id="@+id/coordinates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="30dp"
+                android:textSize="22dp"
+                android:text="This is a popup window."/>
+            <EditText
+                android:id="@+id/nameEnter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_gravity="center_horizontal"
+                android:inputType="textPersonName"
+                android:hint="Name" />
+            <Button
+                android:id="@+id/dismissType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Done"
+                android:layout_marginBottom="16dp" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
+
+
